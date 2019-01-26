@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h1 class="page-title borderBottom">', '</h1>' );
 				?>
 			</header><!-- .page-header -->
 
@@ -22,12 +22,12 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					get_template_part( 'template-parts/content' );
+					get_template_part( 'template-parts/content','tags' );
 				?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php qod_numbered_pagination(); ?>
 
 		<?php else : ?>
 
@@ -36,6 +36,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
+		
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

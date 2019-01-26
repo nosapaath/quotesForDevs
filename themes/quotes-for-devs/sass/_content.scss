@@ -31,3 +31,16 @@
 	clear: both;
 	margin: 0 0 $base__space-unit;
 }
+
+.tags, .categories, .author-list{
+	display: flex;
+	flex-wrap: wrap;
+	li{
+		margin-right: 1rem;
+		margin-bottom: .5rem;
+	}
+}
+
+.borderBottom{
+	border-bottom: $the__dashed_border;
+} 

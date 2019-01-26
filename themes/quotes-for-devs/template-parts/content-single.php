@@ -1,22 +1,32 @@
-<?php
-/**
- * Template part for displaying single posts.
- *
- * @package QOD_Starter_Theme
- */
+<?php 
 
+get_header();
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?>
+<div class="main-content">
+	<i class="fas fa-quote-left quote-home"></i>
+		<div class="quotes-area">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+		<div id="quote">
+			<?php the_content(); ?>
+		</div>
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
-</article><!-- #post-## -->
+		<h2 id="author">
+			<?php the_title(); ?>
+		</h2> 
+
+
+			<button class="quote-generator-btn"type="button" id="random-quote-btn"> 
+				Show Me Another! 
+			</button>
+
+
+		</div>  
+	<i class="fas fa-quote-right quote-home"></i>
+
+</div><!-- main content ends -->
+
+
+
+
+<?php  get_footer(); ?>

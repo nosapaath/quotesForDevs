@@ -1,6 +1,26 @@
-// Center block
 @mixin center-block {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@mixin the-font($sizeVal: 1) {
+	font-size: ($sizeVal * 16) * 1px;
+	font-size: $sizeVal * 1rem;
+}
+
+@mixin screen($size) {
+  @if $size == 'medium' {
+    @media all and (min-width: $breakpoint-medium) {
+        @content;
+    }
+  }
+  @else if $size == 'large' {
+    @media all and (min-width: $breakpoint-large) {
+        @content;
+    }
+  }
+  @else {
+    @content;
+  }
 }

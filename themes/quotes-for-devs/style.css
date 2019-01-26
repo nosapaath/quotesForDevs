@@ -39,6 +39,103 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## All Archives Page
 	## Submit a Quote Page
 --------------------------------------------------------------*/
+.logo-wrapper {
+  margin-bottom: 2.5rem; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.site-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 4.5rem 0 3rem; }
+  .site-info p {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    line-height: 1; }
+  @media all and (min-width: 620px) {
+    .site-info {
+      -ms-flex-wrap: no-wrap;
+          flex-wrap: no-wrap; }
+      .site-info p {
+        display: inline-block;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+        padding-left: 1rem; } }
+  @media all and (min-width: 1080px) {
+    .site-info {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
+
+.menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  margin-right: 1.5rem; }
+  .menu li {
+    border-right: 1px solid white;
+    line-height: 1;
+    padding: 0 16px; }
+    .menu li:first-child {
+      padding-left: 0; }
+    .menu li:last-child {
+      border-right: 0; }
+    @media all and (min-width: 620px) {
+      .menu li:last-child {
+        border-right: 1px solid white; } }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -77,7 +174,8 @@ template {
   display: none; }
 
 a {
-  background-color: transparent; }
+  background-color: transparent;
+  text-decoration: none; }
 
 a:active,
 a:hover {
@@ -195,11 +293,6 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
 legend {
   border: 0;
   padding: 0; }
@@ -221,6 +314,34 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Exo';
+  src: url("../fonts/Exo-LightItalic.eot");
+  src: url("../fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Exo-LightItalic.woff2") format("woff2"), url("../fonts/Exo-LightItalic.woff") format("woff"), url("../fonts/Exo-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../fonts/Exo-Light.eot");
+  src: url("../fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Exo-Light.woff2") format("woff2"), url("../fonts/Exo-Light.woff") format("woff"), url("../fonts/Exo-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../fonts/Exo-Medium.eot");
+  src: url("../fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Exo-Medium.woff2") format("woff2"), url("../fonts/Exo-Medium.woff") format("woff"), url("../fonts/Exo-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../fonts/Exo-MediumItalic.eot");
+  src: url("../fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Exo-MediumItalic.woff2") format("woff2"), url("../fonts/Exo-MediumItalic.woff") format("woff"), url("../fonts/Exo-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -229,8 +350,8 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: white;
+  font-family: "Exo", sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -292,7 +413,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222222;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
@@ -308,13 +429,6 @@ hr {
   border: 0;
   height: 1px;
   margin-bottom: 1.5rem; }
-
-ul,
-ol {
-  margin: 0 0 1.5rem 3rem; }
-
-ul {
-  list-style: disc; }
 
 ol {
   list-style: decimal; }
@@ -344,56 +458,59 @@ table {
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
-button,
+button:not(.search-submit),
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: .75rem;
-  line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
-
-/* Fields */
+input[type="submit"],
 input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
+  background-color: #222222;
+  border: 2px solid #00cc00;
+  border-radius: 3px;
+  color: #00cc00;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.75rem 2.25rem; }
+  button:not(.search-submit):hover, button:not(.search-submit):active, button:not(.search-submit):focus,
+  input[type="button"]:hover,
+  input[type="button"]:active,
+  input[type="button"]:focus,
+  input[type="reset"]:hover,
+  input[type="reset"]:active,
+  input[type="reset"]:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:active,
+  input[type="submit"]:focus,
+  input[type="text"]:hover,
+  input[type="text"]:active,
   input[type="text"]:focus,
+  input[type="search"]:hover,
+  input[type="search"]:active,
+  input[type="search"]:focus,
+  textarea:hover,
+  textarea:active,
+  textarea:focus {
+    outline-color: #222222;
+    border-color: #009900;
+    color: #009900; }
+
+.search-submit {
+  color: #00cc00;
+  background: transparent;
+  border: none; }
+
+/* Fields */
+input[type="email"],
+input[type="url"],
+input[type="password"] {
+  border: none;
+  border-radius: 3px; }
   input[type="email"]:focus,
   input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  textarea:focus {
-    color: #111; }
+  input[type="password"]:focus {
+    outline-color: none; }
 
 input[type="text"],
 input[type="email"],
@@ -406,18 +523,47 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+.quote-generator-btn {
+  display: block; }
+  @media all and (min-width: 1080px) {
+    .quote-generator-btn {
+      margin: 0 auto; } }
+
+.wordpress-ajax-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap; }
+  @media all and (min-width: 1080px) {
+    .wordpress-ajax-form {
+      margin: 0 auto;
+      width: 70%; } }
+  .wordpress-ajax-form label {
+    margin-bottom: .2rem; }
+  .wordpress-ajax-form input:not(#quote-submit) {
+    margin-bottom: 2rem;
+    width: 60%; }
+  .wordpress-ajax-form button {
+    width: 30%; }
+  .wordpress-ajax-form #quote-submit {
+    padding-bottom: 5rem;
+    margin-bottom: 2rem; }
+  .wordpress-ajax-form #submitQuote {
+    padding: 10px 0px; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #00cc00; }
   a:visited {
-    color: purple; }
+    color: #00cc00; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
+    color: #009900; }
   a:hover, a:active {
     outline: 0; }
 
@@ -571,6 +717,19 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
+.tags, .categories, .author-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .tags li, .categories li, .author-list li {
+    margin-right: 1rem;
+    margin-bottom: .5rem; }
+
+.borderBottom {
+  border-bottom: 1px dashed #ffffff; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -593,3 +752,104 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+@media all and (min-width: 1080px) {
+  .main-content {
+    margin-top: 4.5rem;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.quote-home {
+  display: none; }
+  @media all and (min-width: 1080px) {
+    .quote-home {
+      display: inline-block;
+      color: #00cc00;
+      font-size: 125px;
+      line-height: 125px;
+      top: 0; } }
+
+@media all and (min-width: 1080px) {
+  .fa-quote-left {
+    left: -175px; } }
+
+@media all and (min-width: 1080px) {
+  .fa-quote-right {
+    right: -175px; } }
+
+.blog .main-content p,
+.single .main-content p {
+  font-size: 1.25rem; }
+  @media all and (min-width: 620px) {
+    .blog .main-content p,
+    .single .main-content p {
+      font-size: 1.75rem; } }
+  @media all and (min-width: 1080px) {
+    .blog .main-content p,
+    .single .main-content p {
+      font-size: 2.5rem; } }
+
+@media all and (min-width: 1080px) {
+  .quotes-area {
+    width: 70%; } }
+
+.quotes-area p {
+  font-size: 1rem; }
+
+.quotes-area h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem; }
+
+@media all and (min-width: 1080px) {
+  .quotes-area:nth-child(2) {
+    margin: 0 60px; } }
+
+.quotes-area:nth-child(2) h2::before {
+  content: '- '; }
+
+body {
+  height: 100vh;
+  max-width: 1080px;
+  padding: 2.5%;
+  width: 100%; }
+  @media all and (min-width: 1080px) {
+    body {
+      margin: 0 auto; } }
+
+.quote-header {
+  padding-top: 3rem; }
+
+.logo-wrapper svg {
+  display: block;
+  width: 300px;
+  height: auto; }
+  @media all and (min-width: 620px) {
+    .logo-wrapper svg {
+      width: 500px; } }
+  @media all and (min-width: 1080px) {
+    .logo-wrapper svg {
+      margin: 0 auto;
+      width: 700px;
+      height: 100px; } }
+
+@media all and (min-width: 1080px) {
+  .page-template-page-archive-php .site-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .page-template-page-archive-php .site-main h1 {
+      font-size: 2.5rem; }
+    .page-template-page-archive-php .site-main .about-quote {
+      margin: 0 5rem; } }
+
+.page-template-page-archive-php .site-main a {
+  font-size: 1rem; }
+  @media all and (min-width: 620px) {
+    .page-template-page-archive-php .site-main a {
+      font-size: 1.25rem; } }
+
+.page-template-page-archive-php .site-main h2 {
+  font-size: 1.5rem;
+  margin: 1.25rem 0; }

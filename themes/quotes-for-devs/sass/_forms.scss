@@ -4,47 +4,45 @@
 
 /* Buttons */
 
-button,
+button:not(.search-submit),
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
-	font-size: .75rem;
-	line-height: 1;
-	padding: .6rem 1rem .4rem;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-
-	&:hover {
-		border-color: #ccc #bbb #aaa;
-		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-	}
-
-	&:active,
-	&:focus {
-		border-color: #aaa #bbb #bbb;
-		box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-	}
-}
-
-/* Fields */
-
+input[type="submit"],
 input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
 input[type="search"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	background-color: $color__background-body;
+	border: 2px solid $brand__green;
+	border-radius: 3px;
+	color: $brand__green;
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1;
+	padding: ($base__space-unit / 2) ($base__space-unit * 1.5);
+
+	&:hover,
+	&:active,
+	&:focus{
+		outline-color: $color__background-body;
+		border-color: $color__link-hover;
+		color: $color__link-hover;
+	}
+}
+.search-submit{
+	color: $brand__green;
+	background: transparent;
+	border: none;
+}
+/* Fields */
+
+input[type="email"],
+input[type="url"],
+input[type="password"]{
+	border: none;
 	border-radius: 3px;
 
 	&:focus {
-		color: #111;
+		outline-color: none;
 	}
 }
 
@@ -59,4 +57,38 @@ input[type="search"] {
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+.quote-generator-btn{
+	display: block;
+	@include screen(large) {
+		margin: 0 auto;
+	}
+}
+
+.wordpress-ajax-form{
+	display: flex;
+	flex-flow: column nowrap;
+	@include screen(large){
+		margin: 0 auto;
+		width: 70%;
+	}
+	
+	label{
+		margin-bottom: .2rem;
+	}
+	input:not(#quote-submit){
+		margin-bottom: 2rem;
+		width: 60%;
+	}
+	button{
+		width: 30%;
+	}
+	#quote-submit{
+		padding-bottom: 5rem;
+		margin-bottom: 2rem;
+	}
+	#submitQuote{
+		padding: 10px 0px;
+	}
 }

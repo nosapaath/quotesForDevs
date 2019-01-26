@@ -1,24 +1,27 @@
-<?php
-/**
- * Template part for displaying page content in page.php.
- *
- * @package QOD_Starter_Theme
- */
+<?php 
 
+get_header();
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+<div class="main-content">
+	<i class="fas fa-quote-left quote-home"></i>
+		<div class="quotes-area">
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-</article><!-- #post-## -->
+		<h1>
+			<?php the_title(); ?>
+		</h1> 
+		<div id="quote">
+			<?php the_content(); ?>
+		</div>
+
+		
+
+		</div>  
+	<i class="fas fa-quote-right quote-home"></i>
+
+</div><!-- main content ends -->
+
+
+
+
+<?php  get_footer(); ?>

@@ -5,3 +5,135 @@
 /* All Archives Page */
 
 /* Submit a Quote Page */
+
+
+
+.main-content{
+  @include screen(large){
+  margin-top: 4.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  }
+}
+
+.quote-home{
+  display: none;
+    @include screen(large){
+    display: inline-block;
+    color: $brand__green;
+    font-size: 125px;
+    line-height: 125px;
+    top: 0;
+  }
+}
+
+.fa-quote-left {
+    @include screen(large){
+    left: -175px;
+  }
+}
+
+.fa-quote-right {
+    @include screen(large){
+    right: -175px;
+  }
+}
+
+.blog,
+.single,{
+	.main-content {
+		p {
+			font-size: 1.25rem;
+
+			@include screen(medium) {
+				font-size: 1.75rem;
+			}
+	
+			@include screen(large) {
+				font-size: 2.5rem;
+			}
+		}
+	}
+}
+
+.quotes-area{
+  @include screen(large){
+  width: 70%;
+  }
+  p{
+    font-size: 1rem;
+
+    @include screen(medium) {
+    }
+    @include screen(large){
+    }
+  }
+  h2{
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+}
+
+.quotes-area:nth-child(2) {
+  @include screen(large){
+    margin: 0 60px;
+  }
+  h2::before{
+    content: '- ' ;
+  }
+}
+
+body{
+  height: 100vh;
+  max-width: 1080px;
+  padding: 2.5%;
+  width: 100%;
+  @include screen(large){
+    margin: 0 auto;
+  }
+}
+
+.quote-header {
+  padding-top: 3rem;
+}
+
+.logo-wrapper{
+  svg{
+    display: block;
+    width: 300px;
+    height: auto;
+    @include screen(medium){
+      width: 500px;
+    }
+    @include screen(large){
+      margin: 0 auto;
+      width: 700px;
+      height: 100px;
+    }
+  }
+}
+
+.page-template-page-archive-php{
+  .site-main{
+    @include screen(large){
+      display: flex;
+      h1{
+        font-size: 2.5rem;
+      }
+      .about-quote{
+        margin: 0 5rem;
+      }
+    }
+    a{
+      font-size:1rem;
+      @include screen(medium){
+        font-size:1.25rem;
+      }
+    }
+    h2{
+      font-size: 1.5rem;
+      margin: 1.25rem 0;
+    }
+  }  
+}
