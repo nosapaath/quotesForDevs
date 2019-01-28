@@ -41,7 +41,7 @@ And now would be a good time to `git init` :)
 
 ## Learning Points  
 
-- To start with the project I visualized what I need in terms of functionality. From looking at the list of functionality, I need to work on a button that makes an ajax call to the rest api and display some information, the theme needs to be responsive so I will use sass mixins for the design. 
+- To start with the project I visualized what I need in terms of functionality. I need to work on a button that makes an ajax call to the rest api and display some information, the theme needs to be responsive so I will use sass mixins for the design. 
 - What languages do I need? I need html and css, thats a given. But I will need to use php to speak with the WordPress world and use WordPress php functions, filters and action hooks. 
 - I also need JQuery to add functionality of the "Show me another quotes" button. This button needs to do an Ajax call to the Rest API and get a random post/ quote along with the meta data. 
 - I am comfortable with gulp so I will use it for this project. The gulpfile will check for erros, minify files, and also with Browsersync will reload the webpage whenever I Cmnd+S / Save the file. 
