@@ -8,7 +8,10 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main main-content" role="main">
+		<i class="fas fa-quote-left quote-home"></i>
+
+		<section class="quotes-area">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -31,6 +34,8 @@ get_header(); ?>
 
 		<?php endif; ?>
 
+		</section>
+		<i class="fas fa-quote-right quote-home"></i>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 

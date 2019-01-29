@@ -10,11 +10,12 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main main-content" role="main">
+		<i class="fas fa-quote-left quote-home"></i>
 
-			<section class="error-404 not-found">
+			<section class="error-404 not-found quotes-area">
 				<header class="page-header">
-					<h1 class="page-title"><?php echo esc_html( 'Oops! That page can&rsquo;t be found.' ); ?></h1>
+					<h1 class="page-title"><?php echo esc_html( 'Oops!' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
@@ -23,6 +24,7 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
+			<i class="fas fa-quote-right quote-home"></i>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
